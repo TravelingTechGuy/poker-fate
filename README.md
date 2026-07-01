@@ -26,4 +26,4 @@ If you have Python 3 installed on your machine, you can run the app locally by f
 3. Open your browser and navigate to `http://localhost:8080`.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](file:///Users/ttg/Code/Poker/poker-fate/LICENSE.md) file for details. All rights reserved Traveling Tech Guy LLC.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details. All rights reserved Traveling Tech Guy LLC.
