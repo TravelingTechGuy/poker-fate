@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokerFate™</title>
+  <meta name="description" content="A fun poker decision maker wheel for when you just can't decide.">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="glass-container">
+    <h1>PokerFate&trade;</h1>
+    
+    <div class="wheel-container">
+      <div class="arrow"></div>
+      <svg class="wheel-svg" id="wheel" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="text-path-top" d="M 145,200 A 55,55 0 0,1 255,200" />
+          <path id="text-path-bottom" d="M 120,200 A 80,80 0 0,0 280,200" />
+        </defs>
+        
+        <g id="wheel-slices"></g>
+        <g id="wheel-texts"></g>
+        
+        <!-- Dashed edges (outer ring details) -->
+        <circle cx="200" cy="200" r="185" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="15" stroke-dasharray="15 25" />
+        
+        <!-- Inner Core -->
+        <circle cx="200" cy="200" r="105" fill="#333333" stroke="#f8fafc" stroke-width="6" />
+        <circle cx="200" cy="200" r="95" fill="none" stroke="#555555" stroke-width="2" />
+        
+        <!-- Inner Text & Symbol -->
+        <text font-family="Outfit" font-size="28" font-weight="800" fill="white" letter-spacing="4">
+          <textPath href="#text-path-top" startOffset="50%" text-anchor="middle">CASINO</textPath>
+        </text>
+        <text font-family="Outfit" font-size="22" font-weight="800" fill="white" letter-spacing="2">
+          <textPath href="#text-path-bottom" startOffset="50%" text-anchor="middle">$1000</textPath>
+        </text>
+        <text x="200" y="225" font-family="Arial" font-size="64" fill="white" text-anchor="middle">&spades;</text>
+      </svg>
+    </div>
+
+    <div class="controls">
+      <label class="switch-label">
+        <span class="label-text" id="mode-label">Regular Mode</span>
+        <div class="switch">
+          <input type="checkbox" id="mode-toggle">
+          <span class="slider round"></span>
+        </div>
+        <span class="label-text">All In River</span>
+      </label>
+    </div>
+  </div>
+  
+  <footer>
+    <p>All rights reserved Traveling Tech Guy LLC <span id="current-year"></span></p>
+  </footer>
+
+  <!-- Notification overlay when wheel stops -->
+  <div id="result-overlay" class="hidden">
+    <h2 id="result-text"></h2>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
